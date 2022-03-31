@@ -1,9 +1,11 @@
 server:
   port: 8002
+  servlet:
+    context-path: /emp-mgmt  
 
 spring:
   datasource:
-    username: sa
+    username: root
     password: welcome
     url: jdbc:h2:mem:emp_db
 

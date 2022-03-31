@@ -1,0 +1,37 @@
+Links for different operations:
+
+Insert Role            
+	Method:POST	http://localhost:8002/emp-mgmt/role
+
+Insert User 
+	Method:POST http://localhost:8002/emp-mgmt/user/
+          
+Insert Employee
+	HTTP Method:POST	http://localhost:8002/emp-mgmt/employee/
+      AuthType:  Basic Auth
+
+Fetch all Employee
+	HTTP Method:GET	http://localhost:8002/emp-mgmt/employee/
+	 AuthType:  Basic Auth
+	       
+Find an Employee By Id
+	HTTP Method:GET	http://localhost:8002/emp-mgmt/employee/{id}
+	 AuthType:  Basic Auth
+          
+Updating an Employee
+	HTTP Method:PUT	http://localhost:8002/emp-mgmt/employee/
+	 AuthType:  Basic Auth
+                 
+Deleting an Employee By
+	HTTP Method:DELETE	http://localhost:8002/emp-mgmt/employee/{id}
+	 AuthType:  Basic Auth
+          
+Searching an Employee by FirstName
+	HTTP Method:GET	http://localhost:8002/emp-mgmt/employee/searchByFirstName/{FirstName}
+	 AuthType:  Basic Auth
+         
+Fetch all employee sorted based on first name in both order
+	HTTP Method:GET	http://localhost:8002/emp-mgmt/employee/sort?order=asc
+				http://localhost:8002/emp-mgmt/employee/sort?order=desc  
+	 AuthType:  Basic Auth               
+              
