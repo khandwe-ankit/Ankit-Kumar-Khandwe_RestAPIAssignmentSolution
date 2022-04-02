@@ -18,7 +18,7 @@ import com.example.employeemanagementservice.dao.UserRepository;
 import com.example.employeemanagementservice.entity.Role;
 import com.example.employeemanagementservice.entity.User;
 import com.example.employeemanagementservice.exception.RoleDoesNotExistException;
-import com.example.employeemanagementservice.exception.UserNameAlreadyExistException;
+import com.example.employeemanagementservice.exception.DataAlreadyExistException;
 import com.example.employeemanagementservice.service.UserService;
 
 @Service
@@ -71,7 +71,7 @@ public class UserServiceImpl implements UserService {
 				throw new SQLDataException("Something went wrong while saving User: " + userName);
 
 		} else
-			throw new UserNameAlreadyExistException("Username '" + userName
+			throw new DataAlreadyExistException("Username '" + userName
 			        + "' is already in use, Please choose a different one!");
 
 	}

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.employeemanagementservice.entity.User;
-import com.example.employeemanagementservice.exception.UserNameAlreadyExistException;
+import com.example.employeemanagementservice.exception.DataAlreadyExistException;
 import com.example.employeemanagementservice.service.UserService;
 
 @RestController
@@ -28,7 +28,7 @@ public class UserRestController {
 	}
 
 	@PostMapping
-	public Map<String, Object> addUser(@RequestBody User user) throws UserNameAlreadyExistException, SQLException {
+	public Map<String, Object> addUser(@RequestBody User user) throws DataAlreadyExistException, SQLException {
 		return this.userService.save(user);
 	}
 

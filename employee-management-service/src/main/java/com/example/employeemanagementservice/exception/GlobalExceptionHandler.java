@@ -21,9 +21,9 @@ public class GlobalExceptionHandler {
 	}
 
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
-	@ExceptionHandler(UserNameAlreadyExistException.class)
-	public Error handleUserNameAlreadyInUseException(UserNameAlreadyExistException exception) {
-		log.error("Exception while creating new User: {}", exception.getMessage());
+	@ExceptionHandler(DataAlreadyExistException.class)
+	public Error handleUserNameAlreadyInUseException(DataAlreadyExistException exception) {
+		log.error("Exception while saving data: {}", exception.getMessage());
 		return new Error(400, exception.getMessage());
 	}
 

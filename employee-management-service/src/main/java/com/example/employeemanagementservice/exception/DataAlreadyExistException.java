@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class UserNameAlreadyExistException extends RuntimeException {
+public class DataAlreadyExistException extends RuntimeException {
 
 	/**
 	 * 
@@ -14,12 +14,12 @@ public class UserNameAlreadyExistException extends RuntimeException {
 	private int code;
 	private String message;
 
-	public UserNameAlreadyExistException(String message) {
+	public DataAlreadyExistException(String message) {
 		super();
 		this.message = message;
 	}
 
-	public UserNameAlreadyExistException() {
+	public DataAlreadyExistException() {
 		super();
 	}
 
